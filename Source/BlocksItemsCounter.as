@@ -37,24 +37,28 @@ void Main() {
 			userSkinList = {};
 			ScanGameSigns(cast<CSystemFidsFolder>(Fids::GetGameFolder("GameData/Skins")));
 			ScanUserSigns(cast<CSystemFidsFolder>(Fids::GetUserFolder("Skins")));
-			gameSkinList.Sort(function(a,b){
-				string tmpA = Regex::Replace(a.ToLower(), "\\.[^.]*$", "");
-				string tmpB = Regex::Replace(b.ToLower(), "\\.[^.]*$", "");
-				array<string> arrA = tmpA.Split("\\");
-				array<string> arrB = tmpB.Split("\\");
-				if(arrA.Length > 0) tmpA = arrA[arrA.Length-1];
-				if(arrB.Length > 0) tmpB = arrB[arrB.Length-1];
-				return tmpA<tmpB;
-			});
-			userSkinList.Sort(function(a,b){
-				string tmpA = Regex::Replace(a.ToLower(), "\\.[^.]*$", "");
-				string tmpB = Regex::Replace(b.ToLower(), "\\.[^.]*$", "");
-				array<string> arrA = tmpA.Split("\\");
-				array<string> arrB = tmpB.Split("\\");
-				if(arrA.Length > 0) tmpA = arrA[arrA.Length-1];
-				if(arrB.Length > 0) tmpB = arrB[arrB.Length-1];
-				return tmpA<tmpB;
-			});
+			if(!gameSkinList.IsEmpty()){
+				gameSkinList.Sort(function(a,b){
+					string tmpA = Regex::Replace(a.ToLower(), "\\.[^.]*$", "");
+					string tmpB = Regex::Replace(b.ToLower(), "\\.[^.]*$", "");
+					array<string> arrA = tmpA.Split("\\");
+					array<string> arrB = tmpB.Split("\\");
+					if(arrA.Length > 0) tmpA = arrA[arrA.Length-1];
+					if(arrB.Length > 0) tmpB = arrB[arrB.Length-1];
+					return tmpA<tmpB;
+				});
+			}
+			if(!userSkinList.IsEmpty()){
+				userSkinList.Sort(function(a,b){
+					string tmpA = Regex::Replace(a.ToLower(), "\\.[^.]*$", "");
+					string tmpB = Regex::Replace(b.ToLower(), "\\.[^.]*$", "");
+					array<string> arrA = tmpA.Split("\\");
+					array<string> arrB = tmpB.Split("\\");
+					if(arrA.Length > 0) tmpA = arrA[arrA.Length-1];
+					if(arrB.Length > 0) tmpB = arrB[arrB.Length-1];
+					return tmpA<tmpB;
+				});
+			}
 			objects.Resize(0);
 			objectsindex.Resize(0);
 			sortableobjects.Resize(0);
