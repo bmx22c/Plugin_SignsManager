@@ -8,6 +8,7 @@ It is a fork of the [Items & Blocks Counter](https://openplanet.dev/plugin/block
 - Items cannot be modified (yet)
 - Cannot enter a URL (yet)
 - Mass batch sign modify is not made (yet)
+- Does not automatically select previously applied skins in the dropdown (yet)
 - Empty user folder will crash the plugin (to be fixed)
 
 ## Contributing
