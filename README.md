@@ -6,6 +6,7 @@ It is a fork of the [Items & Blocks Counter](https://openplanet.dev/plugin/block
 ## Limitations / Bugs
 - Start / Finish blocks tend to list signs that can't be applied
 - Items cannot be modified (yet)
+- Cannot enter a URL (yet)
 - Mass batch sign modify is not made (yet)
 - Empty user folder will crash the plugin (to be fixed)
 
