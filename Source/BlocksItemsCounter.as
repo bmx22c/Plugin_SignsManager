@@ -100,12 +100,8 @@ void RenderInterface() {
 		UI::SameLine();
 		infotext = "Total count: " + totalObjectCount;
 
-		UI::SameLine();
-		if(Setting_LMFilterButtons){
-			UI::Dummy(vec2(UI::GetWindowSize().x - 850, 10));
-		}else{
-			UI::Dummy(vec2(UI::GetWindowSize().x - 600, 10));
-		}
+		
+		UI::Dummy(vec2(UI::GetWindowSize().x - 550, 10));
 		UI::SameLine();
 		UI::SetNextItemWidth(200);
 		if (refreshobject) {
