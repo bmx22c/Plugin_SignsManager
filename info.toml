@@ -1,0 +1,6 @@
+[meta]
+name = "Signs Manager"
+author = "bmx22c"
+category = "Map Editor"
+version = "1.0"
+blocks = [ "Plugin_Blocks&ItemsCounter" ]
